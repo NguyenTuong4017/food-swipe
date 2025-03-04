@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 export default function CustomerInfo() {
   return (
@@ -7,12 +7,14 @@ export default function CustomerInfo() {
         <Text style={{ fontSize: 20, fontWeight: 700 }}>Tuong Nguyen</Text>
         <Text style={{ color: "grey" }}>What do you want to eat today?</Text>
       </View>
-      <View style={styles.avatarContainer}>
-        <Image
-          source={require("../../assets/avatar.png")}
-          style={styles.avatar}
-        />
-      </View>
+      <TouchableOpacity style={{ height: "100%", width: 70 }}>
+        <View style={styles.avatarContainer}>
+          <Image
+            source={require("../../assets/avatar.png")}
+            style={styles.avatar}
+          />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
